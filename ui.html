@@ -1,0 +1,20 @@
+<button id="create">Create</button>
+<button id="cancel">Cancel</button>
+<p>Msg</p>
+<script>
+
+  onmessage = (event) => {
+    console.log(event.data.pluginMessage)
+  }
+
+document.getElementById('create').onclick = () => {
+  const textbox = document.getElementById('count');
+  const count = parseInt(textbox.value, 10);
+  parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
+}
+
+document.getElementById('cancel').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+}
+
+</script>

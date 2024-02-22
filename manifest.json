@@ -1,0 +1,17 @@
+{
+  "name": "test-v1",
+  "id": "1342067058579129722",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "capabilities": ["inspect", "vscode"],
+  "enableProposedApi": false,
+  "editorType": [
+    "dev"
+  ],
+  "ui": "ui.html",
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ]
+  }
+}
